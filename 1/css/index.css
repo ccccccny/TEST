@@ -1,0 +1,227 @@
+:root{
+	
+}
+
+body {
+	/* background-color: #2b2c2c; */
+    display: flex;
+    margin: 0;
+    padding: 0;
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+@media (overflow-y: scroll) {
+ #main {
+    /* --width-value: calc(100%-100px); */
+  }
+}
+
+.text{
+	display: -webkit-box;
+	word-wrap: break-word;
+	-webkit-line-clamp: 1; /* 显示1行文本 */
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	/* overflow: scroll; */
+	text-overflow: ellipsis; /* 文本溢出时显示省略号 */
+	
+	/* unselectable */
+	-webkit-user-select: none; /* Safari 3.1+ */
+	-moz-user-select: none;    /* Firefox 2+ */
+	-ms-user-select: none;     /* IE 10+ */
+	user-select: none;         /* 标准语法 */
+}
+
+.unselectable {
+  -webkit-user-select: none; /* Safari 3.1+ */
+  -moz-user-select: none;    /* Firefox 2+ */
+  -ms-user-select: none;     /* IE 10+ */
+  user-select: none;         /* 标准语法 */
+}
+
+
+.pad10{
+	height: 120px;
+	padding: 1%;
+}
+
+#app{
+	display: flex;
+	flex-grow: 1;
+	height: 100vh;
+	width: 100vw;
+	flex-direction: row;
+	margin-right: calc(100% - 100vw);
+}
+#left{
+	left: 0;
+	top: 0;
+	padding-left: 10px;
+	padding-right: 10px;
+	/* padding-top: 10px; */
+	position: fixed;
+	height: 100%;
+	min-height: auto;/* 这个加上下面这个 */
+	justify-content: space-between;
+	align-items: center;
+	/* border: 3px solid red; */
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+	width: 50px;
+	display: flex;
+	flex-direction: column;
+	color: aquamarine;
+	z-index: 1;
+	background-color: #202020;
+}
+
+#left .toplogo{
+	padding: 6px;
+	color: white;
+	margin-top: 10px;
+	border: 1px solid skyblue;
+	/* margin-bottom: 10vh; */
+	border-radius: 5px;
+}
+#left .toplogo:hover{
+	background-color: aliceblue;
+	color: aquamarine;
+}
+#left .centerlogo{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 30%;
+	/* border: 1px solid red; */
+	min-height: 130px;/* 这个加上下面这个 */
+	justify-content: space-between;
+}
+#left .logo{
+	display: flex;
+	padding: 6px;
+	color: white;
+	/* margin-top: 1vh; */
+	border: 1px solid skyblue;
+	border-radius: 5px;
+}
+#left .logo:hover{
+	background-color: aliceblue;
+	color: aquamarine;
+}
+#left .endlogo{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 20%;
+	/* border: 1px solid red; */
+	min-height: 10px;/* 这个加上下面这个 */
+	justify-content: space-between;
+	margin-bottom: 10px;
+}
+#main{
+	display: flex;
+	flex-direction: column;
+	/* position: fixed; */
+	top: 0;
+	/* width: calc(100% - 80px); */
+	width: calc(100% - 85px);
+	/* width: calc(100% - 65px); */
+	/* --width-value: calc(100% - 65px); */
+	--width-value: calc(100% - 70px);
+	height: 100%;
+	/* padding-left: 65px; */
+	padding-left: 70px;
+	/* border: 1px solid skyblue; */
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	/* background-color: #2b2c2c;/* #4d4f4f */ */
+}
+
+#main .bg-hui{
+	
+	    display: flex;
+	    position: fixed;
+	    width: var(--width-value);
+	    height: 70px;
+	    background-color: #ffffff;
+}
+
+#main .header{
+	top: 0;
+	display: flex;
+	position: fixed;
+	background-color: #2b2c2c;
+	width: var(--width-value); /* 100% */
+	height: 70px;
+	padding-top: 10px;
+	align-items: center;
+	border-top-right-radius: 5px;
+	/* justify-items: center; */
+	
+}
+
+#main .header .title{
+    font-size: 2.5rem;
+	font-weight: bold;
+	color: aliceblue;
+    padding-left: 10%;
+	display: flex;
+	align-items: center;
+	justify-items: center;
+}
+
+#main .homecenter{
+	width: 67%;
+	/* justify-content: space-between; */
+	display: flex;
+	flex-direction: column;
+	margin-top: 30px;
+}
+
+#main .message{
+	background-color: #4d4f4f;
+	/* margin-bottom: auto; */
+	margin-bottom: 1vh;
+	margin-left: 15%;
+    width: 85%;
+	height: 170px;
+	border-radius: 5px;
+	/* border: 1px solid greenyellow; */
+}
+
+#main .message .title{
+	font-size: 2rem;
+	color: aliceblue;
+}
+
+#main .message .read{
+	/* display: flex; */
+	color: #ebffff;
+	-webkit-line-clamp: 4;
+}
+
+
+#main .saishing{
+	margin-top: 30px;
+	margin-left: 5%;
+	width: 183px;
+}
+
+#main .saishing .bisai{
+	background-color: #4d4f4f;
+	display: flex;
+	flex-direction: column;
+	margin-top: 5%;
+	border-radius: 5px;
+	/* border: 1px solid red; */
+	height: 183px;
+	font-size: 1.2rem;
+	color: aliceblue;
+}
+
+#main .saishing .bisai .picture{
+	/* height: 100px; */
+	margin-top: 40px;
+	margin-left: auto;
+	margin-right: auto;
+}
